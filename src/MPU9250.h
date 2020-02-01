@@ -163,10 +163,18 @@ class MPU9250{
     double _gxbD, _gybD, _gzbD;
     float _gxb, _gyb, _gzb;
     // accel bias and scale factor estimation
-    double _axbD, _aybD, _azbD;
-    float _axmax, _aymax, _azmax;
-    float _axmin, _aymin, _azmin;
-    float _axb, _ayb, _azb;
+    double _axbD = 0.0;
+    double _aybD = 0.0;
+    double _azbD = 0.0;
+    float _axmax = 0.0f;
+    float _aymax = 0.0f;
+    float _azmax = 0.0f;
+    float _axmin = 0.0f;
+    float _aymin = 0.0f;
+    float _azmin = 0.0f;
+    float _axb = 0.0f;
+    float _ayb = 0.0f;
+    float _azb = 0.0f;
     float _axs = 1.0f;
     float _ays = 1.0f;
     float _azs = 1.0f;
