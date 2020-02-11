@@ -160,8 +160,12 @@ class MPU9250{
     uint8_t _srd;
     // gyro bias estimation
     size_t _numSamples = 100;
-    double _gxbD, _gybD, _gzbD;
-    float _gxb, _gyb, _gzb;
+    double _gxbD = 0.0;
+    double _gybD = 0.0;
+    double _gzbD = 0.0;
+    float _gxb = 1.0f;
+    float _gyb = 1.0f;
+    float _gzb = 1.0f;
     // accel bias and scale factor estimation
     double _axbD = 0.0;
     double _aybD = 0.0;
@@ -185,13 +189,19 @@ class MPU9250{
     uint16_t _counter;
     float _framedelta, _delta;
     float _hxfilt, _hyfilt, _hzfilt;
-    float _hxmax, _hymax, _hzmax;
-    float _hxmin, _hymin, _hzmin;
-    float _hxb, _hyb, _hzb;
+    float _hxmax = 0.0f;
+    float _hymax = 0.0f;
+    float _hzmax = 0.0f;
+    float _hxmin = 0.0f;
+    float _hymin = 0.0f;
+    float _hzmin = 0.0f;
+    float _hxb = 0.0f;
+    float _hyb = 0.0f;
+    float _hzb = 0.0f;
     float _hxs = 1.0f;
     float _hys = 1.0f;
     float _hzs = 1.0f;
-    float _avgs;
+    float _avgs = 1.0f;;
     // transformation matrix
     /* transform the accel and gyro axes to match the magnetometer axes */
     const int16_t tX[3] = {0,  1,  0}; 
