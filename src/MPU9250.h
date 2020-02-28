@@ -148,9 +148,11 @@ class MPU9250{
     // wake on motion
     uint8_t _womThreshold;
     // scale factors
-    float _accelScale;
-    float _gyroScale;
-    float _magScaleX, _magScaleY, _magScaleZ;
+    float _accelScale = 1.0f;
+    float _gyroScale = 1.0f;
+    float _magScaleX = 1.0f; 
+    float _magScaleY = 1.0f;
+    float _magScaleZ = 1.0f;
     const float _tempScale = 333.87f;
     const float _tempOffset = 21.0f;
     // configuration
